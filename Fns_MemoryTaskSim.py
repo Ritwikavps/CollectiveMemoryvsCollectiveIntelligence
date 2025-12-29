@@ -334,7 +334,7 @@ def GetAggregateAgentBitsForNgroups(TaskSize, N_a, m_a, N_groups, MemoryDistCond
             elif MemoryDistCondition == "GreaterGroupMem_RedundNoRepBits":
                 AgentBits, ExcludedBitsArray[i] = DistributeTask_GreaterGroupMem_RedundNoRepBits(TaskSize, N_a, m_a)
             else:
-                raise ValueError("Invalid MemoryDistCondition. Possible values are: GreaterGroupMem_NoRedundRandom, GreaterGroupMem_NoRedund1Come1Serve, GreaterGroupMem_NoRedundRandSeq.")
+                raise ValueError("Invalid MemoryDistCondition. Possible values are: GreaterGroupMem_NoRedundRandom, GreaterGroupMem_NoRedund1Come1Serve, GreaterGroupMem_NoRedundRandSeq, GreaterGroupMem_RedundNoRepBits.")
             
             AggregAgentBits = np.vstack([AggregAgentBits, AgentBits]) #Append the AgentBits array to the AggregAgentBits array
 
@@ -358,7 +358,7 @@ N_a (int): Number of agents in a group.
 m_a (int): Memory capacity of each agent.
 N_groups (int): Number of groups to simulate.
 MemoryDistCondition (string): Memory distribution condition. We only use this when the TaskSize is less than the total memory across agents in a group (N_a*m_a > TaskSize).
-    Possible values are: GreaterGroupMem_NoRedundRandom, GreaterGroupMem_NoRedund1Come1Serve, GreaterGroupMem_NoRedundRandSeq.
+    Possible values are: GreaterGroupMem_NoRedundRandom, GreaterGroupMem_NoRedund1Come1Serve, GreaterGroupMem_NoRedundRandSeq, GreaterGroupMem_RedundNoRepBits.
 
 Returns:
 ShuffledGroups: array with the shuffled groups, such that each consecutive group of N_a rows correspond to one shuffled group
