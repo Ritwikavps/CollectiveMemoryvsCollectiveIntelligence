@@ -6,7 +6,7 @@ clear; clc
 %Note that this uses the cmocean function from FileExchange, which is available here (and should be in the path: 
 %https://www.mathworks.com/matlabcentral/fileexchange/57773-cmocean-perceptually-uniform-colormaps.
 %CHANGE PATH ACCORDINGLY
-DataPath = '~/Desktop/GoogleDriveFiles/research/CollectiveMemoryvsCollectiveIntelligence/';%MemoryGameData/';
+DataPath = '~/Desktop/GoogleDriveFiles/research/CollectiveMemoryvsCollectiveIntelligence/MemoryGameData/';
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------
 cd(DataPath)
 MemoryDistCondition_Vec = {'NoRedundRandom', 'RedundNoRepBits', 'NoRedund1Come1Serve', 'NoRedundRandSeq'}; %various memory conditions
