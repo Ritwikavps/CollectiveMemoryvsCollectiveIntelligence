@@ -6,7 +6,7 @@ clear; clc
 %Note that this uses the cmocean function from FileExchange, which is available here (and should be in the path: 
 %https://www.mathworks.com/matlabcentral/fileexchange/57773-cmocean-perceptually-uniform-colormaps.
 %CHANGE PATH ACCORDINGLY
-DataPath = '~/Desktop/GoogleDriveFiles/research/CollectiveMemoryvsCollectiveIntelligence/A1_MemoryModel/MemoryModelSimResults/';
+DataPath = '~/Desktop/GoogleDriveFiles/research/CollectiveMemoryvsCollectiveIntelligence/MemoryGameData/';
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------
 cd(DataPath)
 MemoryDistCondition_Vec = {'NoRedundRandom', 'RedundNoRepBits', 'NoRedund1Come1Serve', 'NoRedundRandSeq'}; %various memory conditions
@@ -136,7 +136,6 @@ function [c_MaxVal, c_MinVal] = PlotMainTxtFig_CIvsCMsurf(MemoryDistCond_Str,Dat
 
     cd(DataPath) %get data struct with data to plot
     DataStruct = load(['CI_vs_CM_Sims_MemoryDistCondition__' MemoryDistCond_Str '.mat']); %load .mat file as a structure
-    % NoRedundRandom
     %Since these were saved from Python, some of the vriables are saved as double and some others as int64, so we have to transform all numbers to converted to double.
     DataStruct = ConvertReqDataToDouble(DataStruct);
    

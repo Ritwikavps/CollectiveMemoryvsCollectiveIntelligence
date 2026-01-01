@@ -8,7 +8,7 @@ clear; clc
 %Note that this uses the cmocean function from FileExchange, which is available here (and should be in the path: 
 %https://www.mathworks.com/matlabcentral/fileexchange/57773-cmocean-perceptually-uniform-colormaps.
 %CHANGE PATH ACCORDINGLY
-DataPath = '~/Desktop/GoogleDriveFiles/research/CollectiveMemoryvsCollectiveIntelligence/A1_MemoryModel/MemoryModelSimResults/PooledGrpMemLessThanTaskSize_MemoryCondEquivTest/';
+DataPath = '~/Desktop/GoogleDriveFiles/research/CollectiveMemoryvsCollectiveIntelligence/MemoryGameData/PooledGrpMemLessThanTaskSize_MemoryCondEquivTest/';
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 %% Plotting
